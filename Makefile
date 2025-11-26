@@ -196,6 +196,7 @@ UPROGS=\
 	$U/_wc\
 	$U/_zombie\
 	$U/_test_getyear\
+	$U/_trace\
 
 
 

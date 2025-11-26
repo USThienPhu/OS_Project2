@@ -97,3 +97,14 @@ sys_uptime(void)
 uint64 sys_getyear(void) {
 return 1975;
 }
+
+uint64
+sys_trace(void)
+{
+  int mask;
+  // Lấy tham số đầu tiên (index 0) từ user truyền vào
+  argint(0, &mask);
+  // Lưu mask vào process hiện tại
+  myproc()->trace_mask = mask;
+  return 0;
+}
