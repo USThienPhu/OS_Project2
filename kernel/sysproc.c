@@ -91,3 +91,9 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//return the year of which
+//Unix version 6 was released
+uint64 sys_getyear(void) {
+return 1975;
+}
