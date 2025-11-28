@@ -195,7 +195,8 @@ UPROGS=\
 	$U/_grind\
 	$U/_wc\
 	$U/_zombie\
-
+	$U/_sysinfotest\
+	$U/_loadtest\
 
 
 

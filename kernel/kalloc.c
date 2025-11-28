@@ -91,3 +91,16 @@ kalloc(void)
   return (void*)r;
 }
 
+// Lab2 - Ex2
+uint64 count_free_mem(void) {
+  struct run *r;
+  uint64 count = 0;
+  acquire(&kmem.lock); // Phải khóa để tránh tranh chấp
+  r = kmem.freelist;
+  while(r) {
+    count++;
+    r = r->next;
+  }
+  release(&kmem.lock);
+  return count * PGSIZE;
+}
