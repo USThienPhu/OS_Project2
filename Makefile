@@ -200,13 +200,6 @@ UPROGS=\
 
 
 
-ifeq ($(LAB),syscall)
-UPROGS += \
-	$U/_attack\
-	$U/_attacktest\
-	$U/_secret
-endif
-
 ifeq ($(LAB),lock)
 UPROGS += \
 	$U/_stats
